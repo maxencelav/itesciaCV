@@ -1,5 +1,12 @@
 body {
     font-family: 'Poppins', sans-serif;
+    horiz-align: center;
+    background: url("assets/images/background.png") repeat;
+}
+#page{
+    width: 80%;
+    border-radius: 15px;
+    background-color: white;
 }
 
 nav {
