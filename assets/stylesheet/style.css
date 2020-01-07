@@ -21,7 +21,8 @@ nav {
     background-color: lightgray;
     color: black;
     float: left;
-
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     margin-bottom: 5px;
     align-items: center;
     display: flex;
