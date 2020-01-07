@@ -4,7 +4,7 @@ body {
 
 nav {
     width: 100%;
-    background-color: gray;
+    background-color: lightgray;
     color: black;
     float: left;
 
@@ -16,15 +16,14 @@ nav {
 }
 
 #logo {
-    display: flex;
+    text-align: center;
+    padding-left: 25px;
 }
 
-#icon {
+#icon, #name {padding: 2px;
     display: inline-block;
-}
+    vertical-align: middle;
 
-#name {
-    display: inline-block;
 }
 
 nav ul {
@@ -33,5 +32,16 @@ nav ul {
 }
 
 nav li {
+    padding: 5px;
     display: inline-block;
+}
+nav a{
+    color: silver;
+    text-decoration: none;
+}
+nav a:hover{
+    color: darkgray;
+}
+.active{
+    color: dimgray;
 }
