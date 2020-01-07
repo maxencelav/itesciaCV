@@ -1,7 +1,8 @@
 body {
     font-family: 'Poppins', sans-serif;
-    horiz-align: center;
-    background: url("assets/images/background.png") repeat;
+
+    background:gainsboro url("../images/background.png");
+   background-size: 80%;
 }
 #page{
     width: 80%;
