@@ -1,9 +1,10 @@
 body {
     font-family: 'Poppins', sans-serif;
-    horiz-align: center;
-    background: url("assets/images/background.png") repeat;
+    background: silver url("../images/background.png") repeat;
+
 }
-#page{
+
+#page {
     width: 80%;
     border-radius: 15px;
     background-color: white;
@@ -27,7 +28,9 @@ nav {
     padding-left: 25px;
 }
 
-#icon, #name {padding: 2px;
+#icon,
+#name {
+    padding: 2px;
     display: inline-block;
     vertical-align: middle;
 
@@ -42,13 +45,16 @@ nav li {
     padding: 5px;
     display: inline-block;
 }
-nav a{
+
+nav a {
     color: silver;
     text-decoration: none;
 }
-nav a:hover{
+
+nav a:hover {
     color: darkgray;
 }
-.active{
+
+.active {
     color: dimgray;
 }
