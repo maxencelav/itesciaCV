@@ -13,16 +13,14 @@ body {
     -webkit-box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.45);
     -moz-box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.45);
     box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.45);
-
+overflow: hidden;
 }
 
 nav {
     width: 100%;
-    background-color: lightgray;
+    background-color: white;
     color: black;
     float: left;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
     margin-bottom: 5px;
     align-items: center;
     display: flex;
@@ -68,4 +66,50 @@ nav a:hover {
 
 header {
     padding: 10px;
+    background: #eeeff0;
+    align-items: center;
+
+}
+#headerContent{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#headerPhoto{
+    padding: 25px;
+
+}
+#photo{
+    width: 350px;
+    border-radius: 50%;
+    border: white;
+    border: 15px solid white;
+    -webkit-box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.20);
+    -moz-box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.20);
+    box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.20);
+}
+#headerText{
+    float: right;
+    width: fit-content;
+    text-align: justify;
+    margin: 0 auto;
+    display: inline-block;
+
+}
+#describ{
+    color: #878889 ;
+}
+#CVButton{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    padding: 0.5em 1.7em;
+    border-radius: 5em;
+    border: 2px solid #307AF6 ;
+
+    -webkit-box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.20);
+    -moz-box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.20);
+    box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.20);
 }
