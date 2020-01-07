@@ -2,12 +2,18 @@ body {
     font-family: 'Poppins', sans-serif;
     background: gainsboro url("../images/background.png");
     background-size: 80%;
+
 }
 
 #page {
+    margin: 0 auto;
     width: 80%;
     border-radius: 15px;
     background-color: white;
+    -webkit-box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.45);
+    box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.45);
+
 }
 
 nav {
@@ -57,4 +63,8 @@ nav a:hover {
 
 .active {
     color: dimgray;
+}
+
+header {
+    padding: 10px;
 }
