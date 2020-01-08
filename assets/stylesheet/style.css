@@ -87,6 +87,8 @@ header {
     width: 350px;
     border-radius: 50%;
     border: 10px solid #F1F3F6;
+    -webkit-box-shadow: 9px 9px 9px rgba(163,177,198,0.2), -9px -9px 9px  rgba(255,255,255, 1),inset 9px 9px 9px 3px rgba(163,177,198,0.5);
+    -moz-box-shadow: 9px 9px 9px rgba(163,177,198,0.2), -9px -9px 9px  rgba(255,255,255, 1),inset 9px 9px 9px 3px rgba(163,177,198,0.5);
     box-shadow: 9px 9px 9px rgba(163,177,198,0.2), -9px -9px 9px  rgba(255,255,255, 1),inset 9px 9px 9px 3px rgba(163,177,198,0.5);
 }
 
