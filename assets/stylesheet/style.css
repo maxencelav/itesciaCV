@@ -328,12 +328,13 @@ h3 {
 
 #clientsGrid {
     grid-template-columns: repeat(6, 1fr);
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    min-height: 200px;
 }
 
 #clientsGrid img {
-    display: inline-block;
-    vertical-align: middle;
+    align-self: center;
     transition: .1s;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
@@ -345,6 +346,7 @@ h3 {
 
 #clientsGrid img:hover {
     transition: .1s;
+    filter: grayscale(0%);
 
     transform: scale(1.1);
     opacity: 100%;
