@@ -216,7 +216,7 @@ h3 {
 
 
 #skillGrid,
-#clientsGrid {
+.clientsGrid {
     margin: 0 auto;
     display: grid;
     grid-gap: 1em;
@@ -325,12 +325,12 @@ h3 {
     background-color: var(--main-color);
 }
 
-#clientsGrid {
+.clientsGrid {
     grid-template-columns: repeat(6, 1fr);
     text-align: center;
 }
 
-#clientsGrid img {
+.clientsGrid img {
     display: inline-block;
     vertical-align: middle;
     transition: .1s;
@@ -342,7 +342,7 @@ h3 {
 }
 
 
-#clientsGrid img:hover {
+.clientsGrid img:hover {
     transition: .1s;
 
     transform: scale(1.1);
@@ -350,7 +350,7 @@ h3 {
 }
 
 footer {
-    min-height: 145px;
+   /* min-height: 145px;*/
     width: 100%;
     background-color: white;
     color: black;
@@ -360,6 +360,7 @@ footer {
     display: flex;
     justify-content: space-between;
     border-top: 1px solid #D4D5D6;
+
 }
 
 footer li {
