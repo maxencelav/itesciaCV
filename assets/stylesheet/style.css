@@ -331,7 +331,7 @@ h3 {
 }
 
 .indicators button {
-    padding: 0.3em;
+    padding: 0.2em;
     padding-left: 1em;
     padding-right: 1em;
 
@@ -340,6 +340,9 @@ h3 {
     margin-right: 0.5em;
 
     border-radius: 5px;
+    transition: .3s;
+    background-color: #D7D8D9);
+
 }
 
 .indicators button:hover {
@@ -351,10 +354,17 @@ h3 {
     margin-right: 0.5em;
 
     border-radius: 5px;
+    transition: .3s;
+
 }
 
 .activeSliderIndicator {
+    padding-left: 2em !;
+    padding-right: 2em !important;
+
     background-color: var(--main-color);
+    transition: .1s;
+
 
 }
 
