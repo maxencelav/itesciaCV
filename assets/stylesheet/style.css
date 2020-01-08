@@ -29,8 +29,6 @@ body {
 
 @media (max-width: 1120px) {
     #page {
-        margin: none;
-
         width: 100%;
         max-width: none;
         border-radius: 0px;
@@ -233,9 +231,16 @@ h3 {
 
 .skill {}
 
-#comment{
+#comment {
     padding: 50px;
     padding: 50px;
+}
+.comment{
+    background-image: url("../images/quote_reverse.png");
+    background-repeat: no-repeat;
+    background-position: 95% 100%;
+    background-size: 3em;
+
 }
 #commentGrid {
     margin: 0 auto;
@@ -255,7 +260,11 @@ h3 {
     margin: 1em 3em;
     padding: 1em 4em 1em 4em;
     border-radius: 10px;
-    color: var(--main-text-color)
+    color: var(--main-text-color);
+    background: white url("../images/quote.png");
+    background-repeat: no-repeat;
+    background-position: 8% 60%;
+    background-size: 1.2em;
 
 }
 .comment p{
