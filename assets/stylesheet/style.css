@@ -1,5 +1,7 @@
 :root {
     --main-color: #307af6;
+    --main-color-light: #698ef8;
+    --main-color-dark: #2c509d;
     --main-title-color: #323232;
     --main-text-color: #878889;
 }
@@ -48,6 +50,7 @@ nav {
 nav ul {
     display: flex;
     float: right;
+    margin-right: 25px;
 }
 
 nav li {
@@ -90,9 +93,9 @@ header {
     width: 350px;
     border-radius: 50%;
     border: 10px solid #F1F3F6;
-    -webkit-box-shadow: 9px 9px 9px rgba(163,177,198,0.2), -9px -9px 9px  rgba(255,255,255, 1),inset 9px 9px 9px 3px rgba(163,177,198,0.5);
-    -moz-box-shadow: 9px 9px 9px rgba(163,177,198,0.2), -9px -9px 9px  rgba(255,255,255, 1),inset 9px 9px 9px 3px rgba(163,177,198,0.5);
-    box-shadow: 9px 9px 9px rgba(163,177,198,0.2), -9px -9px 9px  rgba(255,255,255, 1),inset 9px 9px 9px 3px rgba(163,177,198,0.5);
+    -webkit-box-shadow: 9px 9px 9px rgba(163, 177, 198, 0.2), -9px -9px 9px rgba(255, 255, 255, 1), inset 9px 9px 9px 3px rgba(163, 177, 198, 0.5);
+    -moz-box-shadow: 9px 9px 9px rgba(163, 177, 198, 0.2), -9px -9px 9px rgba(255, 255, 255, 1), inset 9px 9px 9px 3px rgba(163, 177, 198, 0.5);
+    box-shadow: 9px 9px 9px rgba(163, 177, 198, 0.2), -9px -9px 9px rgba(255, 255, 255, 1), inset 9px 9px 9px 3px rgba(163, 177, 198, 0.5);
 }
 
 h1 {
@@ -121,10 +124,24 @@ h1 {
     border-radius: 5em;
     border: 2px solid var(--main-color);
 
-    -webkit-box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.20);
-    -moz-box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.20);
-    box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.20);
+
+
+    -webkit-box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.3);
 }
+
+#CVButton:hover {
+    transition: .3s;
+    transform: scale(1.1);
+}
+
+#CVButton:active {
+    transition: .1s;
+    transform: scale(0.9);
+}
+
+
 #skillGrid{
     display: flex;
     flex-wrap: wrap;
@@ -138,10 +155,11 @@ h1 {
 
 }
 
-#titleSkill{
-
+#titleSkill {
+    grid-column: 1 / span 5;
 }
-.skill{
+
+.skill {
     grid-column: span 2;
     margin-left: 5px;
     margin-right: 5px;
