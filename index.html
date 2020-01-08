@@ -22,102 +22,110 @@
 </head>
 
 <body>
-    <div id="page">
-        <nav>
-            <div id="logo">
-                <img src="favicon-32x32.png" alt="Logo" id="icon">
-                <span id="name"><strong>Alex</strong> Smith</span>
+<div id="page">
+    <nav>
+        <div id="logo">
+            <img src="favicon-32x32.png" alt="Logo" id="icon">
+            <span id="name"><strong>Alex</strong> Smith</span>
+        </div>
+
+        <ul>
+            <li><a href="" class="active">Accueil</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <header>
+        <div id="headerContent">
+            <div id="headerPhoto">
+                <img src="assets/images/headshot.png" alt="Photo" id="photo">
             </div>
 
-            <ul>
-                <li><a href="" class="active">Accueil</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
+            <div id="headerText">
+                <h1>Développeur Java / C++</h1>
+                <p id="describ">Quisque lorem eros, ultruces commodo tortor ut, cursus veneanatis elie. Morbi
+                    aliquam malesuada. Pellentesque id mauris porttitor, cursus libero sit.
+                </p>
+                <button id="CVButton">Télécharger le CV</button>
+            </div>
+        </div>
+    </header>
 
-        </nav>
-
-        <header>
-            <div id="headerContent">
-                <div id="headerPhoto">
-                    <img src="assets/images/headshot.png" alt="Photo" id="photo">
+    <section id="skills">
+        <h2 id="titleSkill">Compétences</h2>
+        <div id="skillGrid">
+            <article id="firstSkill" class="skill">
+                <i class="fas fa-pencil-alt" class="imgSkill"></i>
+                <div id="firstTextSkill" class="textSkill">
+                    <h3>Java</h3>
+                    <p>Pellentesque interdum, diam sit amet pulvinar tincidunt, odio diam tincidunt lorem, a tempus
+                        mauris nulla nec tortor. Nulla urna dolor, pulvinar ut nunc eget, auctor ullamcorper leo.
+                        Proin a urna. </p>
                 </div>
-
-                <div id="headerText">
-                    <h1>Développeur Java / C++</h1>
-                    <p id="describ">Quisque lorem eros, ultruces commodo tortor ut, cursus veneanatis elie. Morbi
-                        aliquam malesuada. Pellentesque id mauris porttitor, cursus libero sit.
-                    </p>
-                    <button id="CVButton">Télécharger le CV</button>
+            </article>
+            <article id="secondSkill" class="skill">
+                <i class="fas fa-store-alt" class="imgSkill"></i>
+                <div id="secondTextSkill" class="textSkill">
+                    <h3>C++</h3>
+                    <p>Vivamus dictum tincidunt aliquam. Sed laoreet id elit eu varius. Suspendisse lobortis nulla
+                        sit amet urna ultrices, non vulputate nulla convallis. Nulla vitae gravida justo, interdum
+                        semper lacus. Curabitur nec.</p>
                 </div>
-            </div>
-        </header>
+            </article>
+            <article id="thirdSkill" class="skill">
+                <i class="fas fa-desktop" class="imgSkill"></i>
+                <div id="thirdTextSkill" class="textSkill">
+                    <h3>Relationnel</h3>
+                    <p>Phasellus ultrices tortor nec augue porta, ut ullamcorper elit dapibus. Sed non varius
+                        sapien. Integer nec nulla ultrices, mollis lectus vitae, pulvinar magna. Pellentesque
+                        ornare, quam mollis finibus interdum, sem.</p>
+                </div>
+            </article>
+            <article id="fourthSkill" class="skill">
+                <i class="fas fa-bullhorn" class="imgSkill"></i>
+                <div id="fourthTextSkill" class="textSkill">
+                    <h3>Agilité</h3>
+                    <p>Nunc ultrices velit sodales odio varius tincidunt. Vestibulum euismod convallis fermentum.
+                        Praesent venenatis leo dui, nec iaculis nisi ullamcorper eu. Nullam augue tortor, dictum non
+                        risus sed, facilisis gravida dolor. </p>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section id="comment">
+        <h2 id="titleComment">Leurs avis</h2>
+        <div id="commentGrid">
+            <article id="firstComment" class="comment">
+                <img src="assets/images/man.jpg" id="firstImgComment" class="imgComment">
+                <div id="firstTextComment" class="textComment">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, dolore magna aliqua. </p>
+                    <span class="name">Daniel Pringle</span>
+                    <br>
+                    <span class="enterprise">Sagebrush</span>
+                </div>
+            </article>
+            <article id="secondComment" class="comment">
+                <img src="assets/images/man2.jpg" id="secondImgComment" class="imgComment">
+                <div id="secondTextComment" class="textComment">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, dolore magna aliqua. </p>
+                    <span class="name">Billy Adams</span>
+                    <br>
+                    <span class="enterprise">Rolling thunder</span>
+                </div>
+            </article>
+        </div>
+    </section>
+    <footer>
+        <ul>
+            <li><a href="">Twitter</a></li>
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Instagram</a></li>
+        </ul>
 
-        <section id="skills">
-            <h2 id="titleSkill">Compétences</h2>
-            <div id="skillGrid">
-                <article id="firstSkill" class="skill">
-                    <i class="fas fa-pencil-alt" class="imgSkill"></i>
-                    <div id="firstTextSkill" class="textSkill">
-                        <h3>Java</h3>
-                        <p>Pellentesque interdum, diam sit amet pulvinar tincidunt, odio diam tincidunt lorem, a tempus
-                            mauris nulla nec tortor. Nulla urna dolor, pulvinar ut nunc eget, auctor ullamcorper leo.
-                            Proin a urna. </p>
-                    </div>
-                </article>
-                <article id="secondSkill" class="skill">
-                    <i class="fas fa-store-alt" class="imgSkill"></i>
-                    <div id="secondTextSkill" class="textSkill">
-                        <h3>C++</h3>
-                        <p>Vivamus dictum tincidunt aliquam. Sed laoreet id elit eu varius. Suspendisse lobortis nulla
-                            sit amet urna ultrices, non vulputate nulla convallis. Nulla vitae gravida justo, interdum
-                            semper lacus. Curabitur nec.</p>
-                    </div>
-                </article>
-                <article id="thirdSkill" class="skill">
-                    <i class="fas fa-desktop" class="imgSkill"></i>
-                    <div id="thirdTextSkill" class="textSkill">
-                        <h3>Relationnel</h3>
-                        <p>Phasellus ultrices tortor nec augue porta, ut ullamcorper elit dapibus. Sed non varius
-                            sapien. Integer nec nulla ultrices, mollis lectus vitae, pulvinar magna. Pellentesque
-                            ornare, quam mollis finibus interdum, sem.</p>
-                    </div>
-                </article>
-                <article id="fourthSkill" class="skill">
-                    <i class="fas fa-bullhorn" class="imgSkill"></i>
-                    <div id="fourthTextSkill" class="textSkill">
-                        <h3>Agilité</h3>
-                        <p>Nunc ultrices velit sodales odio varius tincidunt. Vestibulum euismod convallis fermentum.
-                            Praesent venenatis leo dui, nec iaculis nisi ullamcorper eu. Nullam augue tortor, dictum non
-                            risus sed, facilisis gravida dolor. </p>
-                    </div>
-                </article>
-            </div>
-        </section>
-        <section id="comment">
-            <h2 id="titleComment">Leurs avis</h2>
-            <div id="commentGrid">
-                <article id="firstComment" class="comment">
-                    <img src="assets/images/man.jpg" id="firstImgComment" class="imgComment">
-                    <div id="firstTextComment" class="textComment">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, dolore magna aliqua. </p>
-                        <span class="name">Daniel Pringle</span>
-                        <br>
-                        <span class="enterprise">Sagebrush</span>
-                    </div>
-                </article>
-                <article id="secondComment" class="comment">
-                    <img src="assets/images/man2.jpg" id="secondImgComment" class="imgComment">
-                    <div id="secondTextComment" class="textComment">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, dolore magna aliqua. </p>
-                        <span class="name">Billy Adams</span>
-                        <br>
-                        <span class="enterprise">Rolling thunder</span>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-    </div>
+            <span id="copyright">2019 Tous droits réservés</span>
+    </footer>
+</div>
 
 </body>
 
