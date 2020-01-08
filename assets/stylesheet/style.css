@@ -343,3 +343,34 @@ h3 {
     transform: scale(1.1);
     opacity: 100%;
 }
+
+footer {
+    width: 100%;
+    background-color: white;
+    color: black;
+    float: left;
+    margin-bottom: 5px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #D4D5D6;
+}
+
+footer li {
+    padding: 5px;
+    display: inline-block;
+}
+
+footer a,footer span {
+    transition: .3s;
+    color: silver;
+    text-decoration: none;
+}
+#copyright{
+    margin-right: 25px;
+}
+
+footer a:hover {
+    transition: .3s;
+    color: darkgray;
+}
