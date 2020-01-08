@@ -121,11 +121,6 @@
 
 
                         </article>
-                    </div>
-                </div>
-
-                <div class="slidesComments">
-                    <div class="commentGrid">
 
                         <article class="comment">
                             <img src="assets/images/woman.jpg" class="imgComment">
@@ -146,56 +141,12 @@
                                 <br>
                                 <span class="enterprise">Sweety</span>
                             </div>
-
-
                         </article>
                     </div>
                 </div>
             </div>
 
-            <div class="sliders">
-                <button class="sliderButton" onclick="plusCommentsDivs(-1)">&#10094;</button>
-                <button class="sliderButton" onclick="plusCommentsDivs(1)">&#10095;</button>
-            </div>
 
-            <div class="indicators">
-                <button class="indicatorComments" onclick="currentCommentsDiv(1)"> </button>
-                <button class="indicatorComments" onclick="currentCommentsDiv(2)"> </button>
-            </div>
-
-
-            <script>
-                var slideIndex = 1;
-                showCommentsDivs(slideIndex);
-
-                function plusCommentsDivs(n) {
-                    showCommentsDivs(slideIndex += n);
-                }
-
-                function currentCommentsDiv(n) {
-                    showCommentsDivs(slideIndex = n);
-                }
-
-                function showCommentsDivs(n) {
-                    var i;
-                    var x = document.getElementsByClassName("slidesComments");
-                    var dots = document.getElementsByClassName("indicatorComments");
-                    if (n > x.length) {
-                        slideIndex = 1
-                    }
-                    if (n < 1) {
-                        slideIndex = x.length
-                    }
-                    for (i = 0; i < x.length; i++) {
-                        x[i].style.display = "none";
-                    }
-                    for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" activeSliderIndicator", "");
-                    }
-                    x[slideIndex - 1].style.display = "block";
-                    dots[slideIndex - 1].className += " activeSliderIndicator";
-                }
-            </script>
         </section>
 
         <section id="clients">

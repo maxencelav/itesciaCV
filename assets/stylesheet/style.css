@@ -5,16 +5,44 @@
     --main-title-color: #323232;
     --main-text-color: #878889;
 
+    --scrollbarBG: rgba(0, 0, 0, 0.0);
+    --thumbBG: #307af6;
     --width-mobile: 1120px;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: gainsboro url("../images/background.png");
-    background-size: 80%;
+    background: gainsboro url("../images/background.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     padding: 0;
 }
 
+/* recoloration de la scrollbar */
+
+/* *::-webkit-scrollbar {
+    width: 11px;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG);
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+}
+/*
+
+/* mise en place du fond de la page */
 #page {
     margin: 0 auto;
     width: 80%;
@@ -28,6 +56,11 @@ body {
 }
 
 @media (max-width: 1120px) {
+
+    body {
+        margin: 0;
+    }
+
     #page {
         width: 100%;
         max-width: none;
@@ -35,8 +68,6 @@ body {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
-
-
 
     }
 }
@@ -256,7 +287,32 @@ h3 {
     width: 78%;
 }
 
+
+
+
+/*contient la grille de cartes*/
+.slidesComments {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, calc(40%-40px));
+    grid-template-rows: minmax(150px, 1fr);
+}
+
+/*contient toutes les div commentaires*/
+.commentGrid {
+    overflow-x: scroll;
+    white-space: nowrap;
+
+
+}
+
+/* div contenant l'image, texte, nom, prénom */
 .comment {
+
+    display: inline-block;
+    width: 50%;
+
+
     background-image: url("../images/quote_reverse.png");
     background-repeat: no-repeat;
     background-position: 95% 100%;
@@ -264,16 +320,7 @@ h3 {
 
 }
 
-.commentGrid {
-    margin: 0 auto;
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: -40px;
-
-}
-
-
+/* image au dessus du commentaire */
 .imgComment {
     border-radius: 50%;
     height: 7em;
@@ -288,7 +335,7 @@ h3 {
     transform: scale(1.1);
 }
 
-
+/* texte dans le commentaire  */
 .textComment {
     border: 2px solid #D4D5D6;
     margin: 1em 3em;
@@ -302,16 +349,22 @@ h3 {
 
 }
 
+/* paragraphe dans le commentaire*/
 .comment p {
     font-size: smaller;
     font-style: italic;
+    white-space: pre-line;
+    /*sinon le texte dépasse*/
+
 }
 
+/* nom dans le commentaire*/
 .name {
     color: var(--main-title-color);
     font-weight: bolder;
 }
 
+/* entreprise dans le commentaire*/
 .enterprise {
     color: #D4D5D6;
     font-size: 0.95em;
@@ -322,6 +375,7 @@ h3 {
         /*les diapositives sont masquées par défaut pour que le JS s'occupe de les afficher*/
 }
 
+/* indicateurs du vieux système de scroll */
 .sliders,
 .indicators {
     display: flex;
@@ -331,7 +385,7 @@ h3 {
 }
 
 .indicators button {
-    padding: 0.2em;
+    padding: 0.3em;
     padding-left: 1em;
     padding-right: 1em;
 
@@ -341,7 +395,7 @@ h3 {
 
     border-radius: 5px;
     transition: .3s;
-    background-color: #D7D8D9);
+    background-color: #D7D8D9;
 
 }
 
@@ -362,7 +416,7 @@ h3 {
     padding-left: 2em !;
     padding-right: 2em !important;
 
-    background-color: var(--main-color);
+    background-color: var(--main-color) !important;
     transition: .1s;
 
 
@@ -383,15 +437,22 @@ h3 {
     width: 100%;
     opacity: 50%;
 
+    max-width: 165px;
+
+    height: auto;
+
 }
 
 .clientsGrid img:hover {
+
     transition: .1s;
     filter: grayscale(0%);
 
     transform: scale(1.1);
     opacity: 100%;
 }
+
+/* bas de page */
 
 footer {
     /* min-height: 145px;*/
