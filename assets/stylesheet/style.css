@@ -163,6 +163,14 @@ h3 {
     padding-right: 50px;
 }
 
+h2{
+    display: inline;
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+    background-size: 100% 5px;
+    background-image: linear-gradient(0.25turn, #307AF6 0%, #E0E5EC 30px);
+}
+
 #skillGrid {
     margin: 0 auto;
     display: grid;
