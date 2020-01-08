@@ -232,3 +232,41 @@ h3 {
 
 
 .skill {}
+
+#comment{
+    padding: 50px;
+    padding: 50px;
+}
+#commentGrid {
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+.imgComment{
+    border-radius: 50%;
+    height: 7em;
+    position: relative;
+    bottom: -4.5em;
+}
+.textComment{
+    border: 2px solid #D4D5D6;
+    margin: 1em 3em;
+    padding: 1em 4em 1em 4em;
+    border-radius: 10px;
+    color: var(--main-text-color)
+
+}
+.comment p{
+    font-size: smaller;
+}
+.name{
+    color: var(--main-title-color);
+    font-weight: bolder;
+}
+
+.enterprise{
+    color: #D4D5D6;
+    font-size: 0.95em;
+}
