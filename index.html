@@ -95,26 +95,177 @@
         </section>
         <section id="comment">
             <h2 id="titleComment">Leurs avis</h2>
-            <div id="commentGrid">
-                <article id="firstComment" class="comment">
-                    <img src="assets/images/man.jpg" id="firstImgComment" class="imgComment">
-                    <div id="firstTextComment" class="textComment">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, dolore magna aliqua. </p>
-                        <span class="name">Daniel Pringle</span>
-                        <br>
-                        <span class="enterprise">Sagebrush</span>
+
+            <div>
+                <div class="slidesComments">
+                    <!-- Deux premiers Commentaires -->
+                    <div id="commentGrid">
+
+                        <article id="firstComment" class="comment">
+                            <img src="assets/images/man.jpg" id="firstImgComment" class="imgComment">
+                            <div id="firstTextComment" class="textComment">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, dolore magna aliqua. </p>
+                                <span class="name">Daniel Pringle</span>
+                                <br>
+                                <span class="enterprise">Sagebrush</span>
+                            </div>
+                        </article>
+                        <article id="secondComment" class="comment">
+                            <img src="assets/images/man2.jpg" id="secondImgComment" class="imgComment">
+                            <div id="secondTextComment" class="textComment">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, dolore magna aliqua. </p>
+                                <span class="name">Billy Adams</span>
+                                <br>
+                                <span class="enterprise">LifeGuard</span>
+                            </div>
+
+
+                        </article>
                     </div>
-                </article>
-                <article id="secondComment" class="comment">
-                    <img src="assets/images/man2.jpg" id="secondImgComment" class="imgComment">
-                    <div id="secondTextComment" class="textComment">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, dolore magna aliqua. </p>
-                        <span class="name">Billy Adams</span>
-                        <br>
-                        <span class="enterprise">Rolling thunder</span>
+                </div>
+
+                <div class="slidesComments">
+                    <div id="commentGrid">
+
+                        <article id="firstComment" class="comment">
+                            <img src="assets/images/woman.jpg" id="firstImgComment" class="imgComment">
+                            <div id="firstTextComment" class="textComment">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, dolore magna aliqua. </p>
+                                <span class="name">Anna Lays</span>
+                                <br>
+                                <span class="enterprise">Magic Furnitures</span>
+                            </div>
+                        </article>
+                        <article id="secondComment" class="comment">
+                            <img src="assets/images/woman2.jpg" id="secondImgComment" class="imgComment">
+                            <div id="secondTextComment" class="textComment">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, dolore magna aliqua. </p>
+                                <span class="name">Eleanore Winston</span>
+                                <br>
+                                <span class="enterprise">Sweety</span>
+                            </div>
+
+
+                        </article>
                     </div>
-                </article>
+                </div>
             </div>
+
+
+            <button class="sliderButton" onclick="plusCommentsDivs(-1)">&#10094;</button>
+            <button class="sliderButton" onclick="plusCommentsDivs(1)">&#10095;</button>
+
+            <div class="indicators">
+                <button class="sliderIndicator" onclick="currentCommentsDiv(1)"> </button>
+                <button class="sliderIndicator" onclick="currentCommentsDiv(2)"> </button>
+            </div>
+
+
+            <script>
+                var slideIndex = 1;
+                showCommentsDivs(slideIndex);
+
+                function plusCommentsDivs(n) {
+                    showCommentsDivs(slideIndex += n);
+                }
+
+                function currentCommentsDiv(n) {
+                    showCommentsDivs(slideIndex = n);
+                }
+
+                function showCommentsDivs(n) {
+                    var i;
+                    var x = document.getElementsByClassName("slidesComments");
+                    var dots = document.getElementsByClassName("indicatorComments");
+                    if (n > x.length) {
+                        slideIndex = 1
+                    }
+                    if (n < 1) {
+                        slideIndex = x.length
+                    }
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" activeSliderIndicator", "");
+                    }
+                    x[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " activeSliderIndicator";
+                }
+            </script>
+        </section>
+
+        <section id="clients">
+            <h2 id="titleComment">Clients</h2>
+            <div>
+                <div class="slidesClients">
+                    <div id="clientsGrid">
+
+                        <img src="/assets/images/logos/lifeguard.png" alt="LifeGuard">
+                        <img src="/assets/images/logos/lifeguard.png" alt="LifeGuard">
+                        <img src="/assets/images/logos/magicfurnitures.png" alt="LifeGuard">
+                        <img src="/assets/images/logos/sweety.png" alt="LifeGuard">
+                        <img src="/assets/images/logos/lifeguard.png" alt="LifeGuard">
+                        <img src="/assets/images/logos/lifeguard.png" alt="LifeGuard">
+
+                        </article>
+                    </div>
+
+                    <div class="slidesClients">
+                        <div id="clientsGrid">
+
+                            <img src="/assets/images/logos/assasisa.png" alt="LifeGuard">
+                            <img src="/assets/images/logos/lifeguard.png" alt="LifeGuard">
+                            <img src="/assets/images/logos/magicfurnitures.png" alt="LifeGuard">
+                            <img src="/assets/images/logos/sweety.png" alt="LifeGuard">
+                            <img src="/assets/images/logos/lifeguard.png" alt="LifeGuard">
+                            <img src="/assets/images/logos/lifeguard.png" alt="LifeGuard">
+    
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="sliderButton" onclick="plusClientsDivs(-1)">&#10094;</button>
+                <button class="sliderButton" onclick="plusClientsDivs(1)">&#10095;</button>
+
+                <div class="indicators">
+                    <button class="sliderIndicator" onclick="currentClientsDiv(1)"> </button>
+                    <button class="sliderIndicator" onclick="currentClientsDiv(2)"> </button>
+                </div>
+
+                <script>
+                    var slideIndex = 1;
+                    showClientsDivs(slideIndex);
+
+                    function plusClientsDivs(n) {
+                        showClientsDivs(slideIndex += n);
+                    }
+
+                    function currentClientsDiv(n) {
+                        showClientsDivs(slideIndex = n);
+                    }
+
+                    function showClientsDivs(n) {
+                        var i;
+                        var x = document.getElementsByClassName("slidesClients");
+                        var dots = document.getElementsByClassName("indicatorClients");
+                        if (n > x.length) {
+                            slideIndex = 1
+                        }
+                        if (n < 1) {
+                            slideIndex = x.length
+                        }
+                        for (i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" activeSliderIndicator", "");
+                        }
+                        x[slideIndex - 1].style.display = "block";
+                        dots[slideIndex - 1].className += " activeSliderIndicator";
+                    }
+                </script>
         </section>
 
     </div>

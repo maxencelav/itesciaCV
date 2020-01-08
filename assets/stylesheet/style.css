@@ -186,20 +186,25 @@ h3 {
     transform: scale(0.9);
 }
 
-#skills {
+#skills,
+#clients {
     padding: 50px;
     padding-bottom: 0;
 }
 
 
 
-#skillGrid {
+#skillGrid,
+#clientsGrid {
     margin: 0 auto;
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
 
 }
+
+
+
 
 /* si on passe en mode mobile*/
 @media (max-width: 1120px) {
@@ -284,4 +289,37 @@ h3 {
 .enterprise {
     color: #D4D5D6;
     font-size: 0.95em;
+}
+
+.mySlides {
+    display: none
+        /*les diapositives sont masquées par défaut pour que le JS s'occupe de les afficher*/
+}
+
+.sliderIndicator {
+    padding: 1em;
+}
+
+.activeSliderIndicator {
+    background-color: var(--main-color);
+}
+
+#clientsGrid {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+#clientsGrid img {
+    transition: .1s;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    width: 100%;
+    opacity: 50%;
+}
+
+
+#clientsGrid img:hover {
+    transition: .1s;
+
+    transform: scale(1.1);
+    opacity: 100%;
 }
