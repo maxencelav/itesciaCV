@@ -208,8 +208,7 @@ h3 {
     transform: scale(0.9);
 }
 
-#skills,
-#clients {
+#skills {
     padding: 50px;
     padding-bottom: 0;
 }
