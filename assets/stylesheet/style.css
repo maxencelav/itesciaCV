@@ -269,7 +269,7 @@ h3 {
 
 }
 
-#commentGrid {
+.commentGrid {
     margin: 0 auto;
     display: grid;
     grid-gap: 1rem;
