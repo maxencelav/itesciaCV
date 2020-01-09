@@ -227,7 +227,8 @@ input[type=submit]:active,
 #skills,
 #comment,
 #clients,
-#stories, {
+#stories,
+#contact {
 	padding: 50px;
 	padding-top: 30px;
 	padding-bottom: 0;
@@ -484,7 +485,6 @@ footer a:hover {
 	width: 13%;
 	padding: 1em;
 }
-
 
 form {
 	justify-content: center;
