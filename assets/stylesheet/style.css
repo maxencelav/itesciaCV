@@ -289,8 +289,11 @@ input[type=submit]:active,
 
 /*contient toutes les div commentaires*/
 .commentGrid {
-	overflow-x: scroll;
+	overflow-x: hidden;
 	white-space: nowrap;
+}
+.commentGrid:hover {
+	overflow-x: scroll;
 }
 
 /* div contenant l'image, texte, nom, prénom */
@@ -349,6 +352,23 @@ input[type=submit]:active,
 .enterprise {
 	color: #d4d5d6;
 	font-size: 0.95em;
+}
+
+/* si on passe en mode mobile*/
+@media (max-width: 700px) {
+	.comment {
+		display: inline-block;
+		width: 100%;
+
+		background-image: url("../images/quote_reverse.png");
+		background-repeat: no-repeat;
+		background-position: 95% 100%;
+		background-size: 3em;
+	}
+	.textComment {
+		margin: 1em 2em;
+		padding: 1em 4em 1em 4em;
+	}
 }
 
 .mySlides {
