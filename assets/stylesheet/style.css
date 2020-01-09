@@ -508,7 +508,7 @@ footer a:hover {
 }
 
 /* si on passe en mode mobile*/
-@media (max-width: 1120px) {
+@media (max-width: 800px) {
 	.story {
 		width: 100%;
 	}
@@ -517,14 +517,14 @@ footer a:hover {
 	}
 }
 
-.ChiffreMagique {
+.storyNumber {
 	color: var(--light-text-color);
 	font-size: 2.5em;
 	padding: 0.1em;
 	margin: 0.1em;
 }
 
-.HistoireNom {
+.storyName {
 	margin-top: auto;
 	margin-bottom: auto;
 	color: var(--main-title-color);
