@@ -31,7 +31,7 @@
         </div>
 
         <ul>
-            <li><a href="index.html" >Accueil</a></li>
+            <li><a href="index.html">Accueil</a></li>
             <li><a href="" class="active">Contact</a></li>
         </ul>
     </nav>
@@ -43,40 +43,48 @@
     </header>
     <form method="POST" id="formcontact">
         <h3>Vos coordonnées :</h3>
+        <section id="contact">
+            <div>
+                <input type="text" id="nom" name="nom" placeholder="Nom, prénom" required>
+            </div>
+             <hr>
+            <div>
+                <input type="text" id="Entreprise" name="Entreprise" placeholder="Entreprise">
+            </div>
+            <hr>
+            <div>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <hr>
+            <div>
+                <input type="tel" id="telephone" name="telephone" placeholder="Telephone" required>
+            </div>
+            <hr>
+        </section>
         <div>
-        <label for="nom" >Nom :</label>
-        <input type="text" id="nom" name="nom" required>
+            <h3>Méthode de communication préférée :</h3>
+            <input type="radio" id="mail" name="method" checked><label for="email">Email</label>
+            <input type="radio" id="sms" name="method"><label for="sms">SMS</label>
         </div>
+        <div>
+            <h3>Message :</h3>
 
-<div>
-        <label for="Entreprise">Entreprise :</label>
-        <input type="text" id="Entreprise" name="Entreprise">
-        <br>
-</div>
+            <select id="object" name="object">
+                <option value="">Objet de votre message</option>
+                <option value="employemment">Offre d'emploi</option>
+                <option value="mission">Offre de mission</option>
+                <option value="advice">Demande de conseil</option>
+                <option value="Autre">Autre</option>
+            </select>
 
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required>
-        <br>
-
-        <label for="telephone">Téléphone :</label>
-        <input type="tel" id="telephone" name="telephone" required>
-        <br>
-
-       <h3>Méthode de communication préférée :</h3>
-        <input type="radio" id="mail" name="method" checked><label for="email">Email</label>
-        <input type="radio" id="sms" name="method"><label for="sms">SMS</label>
-
-        <h3>Message :</h3>
-        <select id="object" name="object">
-            <option value="">Objet de votre message</option>
-            <option value="employemment">Offre d'emploi</option>
-            <option value="mission">Offre de mission</option>
-            <option value="advice">Demande de conseil</option>
-            <option value="Autre">Autre</option>
-        </select>
-
+        </div>
+        <div>
+            <textarea id="msg" name="userMessage" placeholder="Votre message"></textarea>
+        </div>
     </form>
-
+    <div id="wrap-bouton">
+        <input type="submit" form="formcontact" id="envoi">
+    </div>
     <footer>
         <ul>
             <li><a href="">Twitter</a></li>
