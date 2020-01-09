@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="assets/stylesheet/style.css">
+    <link rel="stylesheet" href="assets/stylesheet/styleContact.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
@@ -18,11 +18,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <!-- icône du site -->
-    <title>CV</title>
+    <title>Contactez moi</title>
 </head>
 
 <body>
 <div id="page">
+
     <nav>
         <div id="logo">
             <img src="favicon-32x32.png" alt="Logo" id="icon">
@@ -33,15 +34,48 @@
             <li><a href="index.html" >Accueil</a></li>
             <li><a href="" class="active">Contact</a></li>
         </ul>
-
     </nav>
 
     <header>
         <div id="headerContent">
-
+            <h1>Contactez moi</h1>
         </div>
     </header>
+    <form method="POST" id="formcontact">
+        <h3>Vos coordonnées :</h3>
+        <div>
+        <label for="nom" >Nom :</label>
+        <input type="text" id="nom" name="nom" required>
+        </div>
 
+<div>
+        <label for="Entreprise">Entreprise :</label>
+        <input type="text" id="Entreprise" name="Entreprise">
+        <br>
+</div>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <label for="telephone">Téléphone :</label>
+        <input type="tel" id="telephone" name="telephone" required>
+        <br>
+
+       <h3>Méthode de communication préférée :</h3>
+        <input type="radio" id="mail" name="method" checked><label for="email">Email</label>
+        <input type="radio" id="sms" name="method"><label for="sms">SMS</label>
+
+        <h3>Message :</h3>
+        <select id="object" name="object">
+            <option value="">Objet de votre message</option>
+            <option value="employemment">Offre d'emploi</option>
+            <option value="mission">Offre de mission</option>
+            <option value="advice">Demande de conseil</option>
+            <option value="Autre">Autre</option>
+        </select>
+
+    </form>
 
     <footer>
         <ul>
@@ -50,7 +84,7 @@
             <li><a href="">Instagram</a></li>
         </ul>
 
-        <span id="copyright">2019 Tous droits réservés</span>
+        <span id="copyright">©2020 Tous droits réservés</span>
     </footer>
 </div>
 
