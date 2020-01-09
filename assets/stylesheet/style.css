@@ -223,7 +223,7 @@ h3 {
     border-radius: 5em;
     border: 2px solid var(--main-color);
     transition: .1s;
-
+    outline: none;
     -webkit-box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.3);
@@ -413,7 +413,7 @@ h3 {
 }
 
 .activeSliderIndicator {
-    padding-left: 2em !;
+    padding-left: 2em !important;
     padding-right: 2em !important;
 
     background-color: var(--main-color) !important;
