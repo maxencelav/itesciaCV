@@ -18,42 +18,94 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <!-- icône du site -->
-    <title>CV</title>
+    <title>Contactez moi</title>
 </head>
 
 <body>
-<div id="page">
-    <nav>
-        <div id="logo">
-            <img src="favicon-32x32.png" alt="Logo" id="icon">
-            <span id="name"><strong>Alex</strong> Smith</span>
-        </div>
+    <div id="page">
+        <nav>
+            <div id="logo">
+                <img src="favicon-32x32.png" alt="Logo" id="icon">
+                <span id="name"><strong>Alex</strong> Smith</span>
+            </div>
 
-        <ul>
-            <li><a href="index.html" >Accueil</a></li>
-            <li><a href="" class="active">Contact</a></li>
-        </ul>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="" class="active">Contact</a></li>
+            </ul>
+        </nav>
 
-    </nav>
+        <header>
+            <div id="headerContent pageHeader">
+                <h1>Contactez moi</h1>
+            </div>
+        </header>
 
-    <header>
-        <div id="headerContent">
+        <section id="contact">
 
-        </div>
-    </header>
+            <form method="POST" id="formContact">
+                <h2 id="titleContact">Vos coordonnées :</h2>
+
+                <div class="contactContent">
+                    <input type="text" id="nom" name="nom" placeholder="Nom, prénom" required>
+
+                    <input type="text" id="Entreprise" name="Entreprise" placeholder="Entreprise">
+
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+
+                    <input type="tel" id="telephone" name="telephone" placeholder="Telephone" required>
+                </div>
 
 
-    <footer>
-        <ul>
-            <li><a href="">Twitter</a></li>
-            <li><a href="">Facebook</a></li>
-            <li><a href="">Instagram</a></li>
-        </ul>
 
-        <span id="copyright">2019 Tous droits réservés</span>
-    </footer>
-</div>
 
+
+                <h2>Méthode de communication préférée :</h2>
+                <div class="contactContent">
+                    <div id="communicationType">
+                        <input type="radio" id="mail" name="method" checked><label for="mail">Email</label>
+                        <input type="radio" id="sms" name="method"><label for="sms">SMS</label>
+
+                    </div>
+                </div>
+
+
+                <h2>Message :</h2>
+                <div class="contactContent">
+                    <select id="object" name="object">
+                        <optgroup label="Objet de votre message">
+                            <option value="employemment">Offre d'emploi</option>
+                            <option value="mission">Offre de mission</option>
+                            <option value="advice">Demande de conseil</option>
+                            <option value="Autre">Autre</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+
+                <div>
+                    <textarea id="msg" name="userMessage" placeholder="Votre message"></textarea>
+                </div>
+
+            </form>
+
+            <div id="wrapBouton">
+                <input type="submit" form="formcontact" id="envoi" ="Envoyer">
+            </div>
+        </section>
+
+
+
+
+        <footer>
+            <ul>
+                <li><a href="">Twitter</a></li>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">Instagram</a></li>
+            </ul>
+
+            <span id="copyright">©2020 Tous droits réservés</span>
+        </footer>
 </body>
 
 </html>
