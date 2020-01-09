@@ -20,28 +20,6 @@ body {
 	padding: 0;
 }
 
-/* recoloration de la scrollbar */
-
-/* *::-webkit-scrollbar {
-    width: 11px;
-}
-
-* {
-    scrollbar-width: thin;
-    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
-}
-
-*::-webkit-scrollbar-track {
-    background: var(--scrollbarBG);
-}
-
-*::-webkit-scrollbar-thumb {
-    background-color: var(--thumbBG);
-    border-radius: 6px;
-    border: 3px solid var(--scrollbarBG);
-}
-/*
-
 /* mise en place du fond de la page */
 #page {
 	margin: 0 auto;
@@ -470,21 +448,37 @@ footer a:hover {
 	color: darkgray;
 }
 
+form {
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: repeat(1, 1fr);
+	margin-left: 2em;
+	margin-right: 2em;
+}
+
 input[type=text],
 input[type=tel],
 input[type=email],
-textarea {
-	width: 70%;
+textarea,
+select {
+	width: 100%;
 	padding: 10px 22px;
 	margin: 5px 5px;
 	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
+	font-size: large;
 	background-color: #f1f3f6;
 	border-radius: 10px;
 	border: 3px solid #f1f3f6;
 	cursor: pointer;
 }
+
 select {
 	border-radius: 10px;
 	outline: none;
+}
+
+.contactContent {
+	padding-top: 2em;
+	padding-bottom: 2em;
 }

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="assets/stylesheet/styleIndex.css">
+    <link rel="stylesheet" href="assets/stylesheet/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
@@ -22,76 +22,90 @@
 </head>
 
 <body>
-<div id="page">
+    <div id="page">
+        <nav>
+            <div id="logo">
+                <img src="favicon-32x32.png" alt="Logo" id="icon">
+                <span id="name"><strong>Alex</strong> Smith</span>
+            </div>
 
-    <nav>
-        <div id="logo">
-            <img src="favicon-32x32.png" alt="Logo" id="icon">
-            <span id="name"><strong>Alex</strong> Smith</span>
-        </div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="" class="active">Contact</a></li>
+            </ul>
+        </nav>
 
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="" class="active">Contact</a></li>
-        </ul>
-    </nav>
+        <header>
+            <div id="headerContent pageHeader">
+                <h1>Contactez moi</h1>
+            </div>
+        </header>
 
-    <header>
-        <div id="headerContent pageHeader">
-            <h1 >Contactez moi</h1>
-        </div>
-    </header>
-    <form method="POST" id="formcontact">
-        <h3>Vos coordonnées :</h3>
         <section id="contact">
-            <div>
-                <input type="text" id="nom" name="nom" placeholder="Nom, prénom" required>
-            </div>
-            <div>
-                <input type="text" id="Entreprise" name="Entreprise" placeholder="Entreprise">
-            </div>
-            <div>
-                <input type="email" id="email" name="email" placeholder="Email" required>
-            </div>
-            <div>
-                <input type="tel" id="telephone" name="telephone" placeholder="Telephone" required>
+
+            <form method="POST" id="formContact">
+                <h2 id="titleContact">Vos coordonnées :</h2>
+
+                <div class="contactContent">
+                    <input type="text" id="nom" name="nom" placeholder="Nom, prénom" required>
+
+                    <input type="text" id="Entreprise" name="Entreprise" placeholder="Entreprise">
+
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+
+                    <input type="tel" id="telephone" name="telephone" placeholder="Telephone" required>
+                </div>
+
+
+
+
+
+                <h2>Méthode de communication préférée :</h2>
+                <div class="contactContent">
+                    <div id="communicationType">
+                        <input type="radio" id="mail" name="method" checked><label for="email">Email</label>
+                        <input type="radio" id="sms" name="method"><label for="sms">SMS</label>
+
+                    </div>
+                </div>
+
+
+                <h2>Message :</h2>
+                <div class="contactContent">
+                    <select id="object" name="object">
+                        <optgroup label="Objet de votre message">
+                            <option value="employemment">Offre d'emploi</option>
+                            <option value="mission">Offre de mission</option>
+                            <option value="advice">Demande de conseil</option>
+                            <option value="Autre">Autre</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+
+                <div>
+                    <textarea id="msg" name="userMessage" placeholder="Votre message"></textarea>
+                </div>
+
+            </form>
+
+            <div id="wrap-bouton">
+                <input type="submit" form="formcontact" id="envoi">
             </div>
         </section>
-        <div>
-            <h3>Méthode de communication préférée :</h3>
-            <input type="radio" id="mail" name="method" checked><label for="email">Email</label>
-            <input type="radio" id="sms" name="method"><label for="sms">SMS</label>
-        </div>
-        <div>
-            <h3>Message :</h3>
 
-            <select id="object" name="object">
-                <option value="">Objet de votre message</option>
-                <option value="employemment">Offre d'emploi</option>
-                <option value="mission">Offre de mission</option>
-                <option value="advice">Demande de conseil</option>
-                <option value="Autre">Autre</option>
-            </select>
 
-        </div>
-        <div>
-            <textarea id="msg" name="userMessage" placeholder="Votre message"></textarea>
-        </div>
-    </form>
-    <div id="wrap-bouton">
-        <input type="submit" form="formcontact" id="envoi">
-    </div>
-    <footer>
-        <ul>
-            <li><a href="">Twitter</a></li>
-            <li><a href="">Facebook</a></li>
-            <li><a href="">Instagram</a></li>
-        </ul>
 
-        <span id="copyright">©2020 Tous droits réservés</span>
-    </footer>
-</div>
 
+        <footer>
+            <ul>
+                <li><a href="">Twitter</a></li>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">Instagram</a></li>
+            </ul>
+
+            <span id="copyright">©2020 Tous droits réservés</span>
+        </footer>
 </body>
 
 </html>
