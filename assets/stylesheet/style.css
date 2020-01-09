@@ -89,20 +89,24 @@ nav ul {
 }
 
 /*  bloc contenant le lien de navigation */
-nav li {
+nav li,
+footer li {
 	padding: 5px;
 	display: inline-block;
 }
 
-/* lien de navigation */
-nav a {
+/* liens de navigation */
+nav a,
+footer a,
+footer span {
 	transition: .1s;
 	color: silver;
 	text-decoration: none;
 }
 
 /* survol du lien de navigation */
-nav a:hover {
+nav a:hover,
+footer a:hover {
 	transition: .1s;
 	color: darkgray;
 }
@@ -169,6 +173,17 @@ h1 {
 #describ {
 	color: var(--main-text-color);
 	font-size: 0.9em;
+}
+
+/* reset du style de bouton pour réparer une erreur d'affichage sur Safari */
+input[type=submit],
+#CVButton {
+	padding: 0;
+	border: none;
+	font: inherit;
+	color: inherit;
+	background-color: transparent;
+	cursor: pointer;
 }
 
 /* boutons sur le site (cv/envoi de formulaire) */
@@ -440,7 +455,7 @@ h3 {
 	transition: .3s;
 }
 
-/*  indicateur de la slide active */
+/* indicateur de la slide active */
 .activeSliderIndicator {
 	padding-left: 2em !important;
 	padding-right: 2em !important;
@@ -449,6 +464,7 @@ h3 {
 	transition: .1s;
 }
 
+/* conteneur des clients */
 .clientsGrid {
 	grid-template-columns: repeat(6, 1fr);
 	display: flex;
@@ -457,6 +473,7 @@ h3 {
 	min-height: 200px;
 }
 
+/* image de chaque client */
 .clientsGrid img {
 	align-self: center;
 	transition: .1s;
@@ -464,16 +481,16 @@ h3 {
 	filter: grayscale(100%);
 	width: 100%;
 	opacity: 50%;
-
 	max-width: 165px;
-
 	height: auto;
 }
 
+/* image de chaque client */
 .clientsGrid img:hover {
 	transition: .1s;
-	filter: grayscale(0%);
 
+	-webkit-filter: grayscale(0%);
+	filter: grayscale(0%);
 	transform: scale(1.1);
 	opacity: 100%;
 }
@@ -486,50 +503,14 @@ h3 {
 	}
 }
 
-/* bas de page */
-
-footer {
-	/* min-height: 145px;*/
-	width: 100%;
-	background-color: white;
-	color: black;
-	float: left;
-	margin-top: 1em;
-
-	margin-bottom: 5px;
-	align-items: center;
-	display: flex;
-	justify-content: space-between;
-	border-top: 1px solid #d4d5d6;
-}
-
-footer li {
-	padding: 5px;
-	display: inline-block;
-}
-
-footer a,
-footer span {
-	transition: .3s;
-	color: silver;
-	text-decoration: none;
-}
-
-#copyright {
-	margin-right: 25px;
-}
-
-footer a:hover {
-	transition: .3s;
-	color: darkgray;
-}
-
+/* conteneur des histoires vraies */
 #storyGrid {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
+/* histoire */
 .story {
 	border: 2px solid var(--light-text-color);
 	border-radius: 10px;
@@ -541,6 +522,7 @@ footer a:hover {
 
 /* si on passe en mode mobile*/
 @media (max-width: 800px) {
+	/* on empile les histoires */
 	.story {
 		width: 100%;
 	}
@@ -550,13 +532,7 @@ footer a:hover {
 	}
 }
 
-.storyNumber {
-	color: var(--light-text-color);
-	font-size: 2.5em;
-	padding: 0.1em;
-	margin: 0.1em;
-}
-
+/* texte de description dans les histoires */
 .storyName {
 	margin-top: auto;
 	margin-bottom: auto;
@@ -565,11 +541,15 @@ footer a:hover {
 	font-size: 0.9em;
 }
 
-.HistoireLogo {
-	width: 13%;
-	padding: 1em;
+/* texte du nombre dans les histoires */
+.storyNumber {
+	color: var(--light-text-color);
+	font-size: 2.5em;
+	padding: 0.1em;
+	margin: 0.1em;
 }
 
+/* formulaire de contact */
 form {
 	justify-content: center;
 	align-items: center;
@@ -578,6 +558,7 @@ form {
 	margin-right: 2em;
 }
 
+/* champs de texte/séléction du formulaire */
 input[type=text],
 input[type=tel],
 input[type=email],
@@ -595,16 +576,13 @@ select {
 	cursor: pointer;
 }
 
+/* désactivation de la redimension horizontale du champ de texte large */
 textarea {
 	resize: vertical;
 	min-height: 5em;
 }
 
-select {
-	border-radius: 10px;
-	outline: none;
-}
-
+/* centrer les champs de texte et le bouton */
 .contact,
 .wrapBouton {
 	display: table-cell;
@@ -612,12 +590,14 @@ select {
 	vertical-align: middle;
 }
 
+/* changer la taille du bouton d'envoi de formulaire */
 input[type=submit] {
 	margin: auto;
 	display: block !important;
 	width: 50% !important;
 }
 
+/* ajout de l'espacement entre tous les champs de contact */
 .contactContent {
 	padding-top: 2em;
 	padding-bottom: 2em;
@@ -675,4 +655,24 @@ select {
 	/* ajout de la flèche personnalisée au rond cliqué */
 	background: url("/assets/images/fleche.svg") 98% / 15% no-repeat #f1f3f6;
 	background-size: 5%;
+}
+
+/* bas de page */
+footer {
+	/* min-height: 145px;*/
+	width: 100%;
+	background-color: white;
+	color: black;
+	float: left;
+	margin-top: 1em;
+
+	margin-bottom: 5px;
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid #d4d5d6;
+}
+/* placement du texte de copyright */
+#copyright {
+	margin-right: 25px;
 }
