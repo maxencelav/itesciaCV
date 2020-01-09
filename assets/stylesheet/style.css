@@ -4,6 +4,7 @@
 	--main-color-dark: #2c509d;
 	--main-title-color: #323232;
 	--main-text-color: #878889;
+	--light-text-color: #d4d5d6;
 
 	--scrollbarBG: rgba(0, 0, 0, 0.0);
 	--thumbBG: #307af6;
@@ -464,7 +465,7 @@ footer a:hover {
 }
 
 .Histoire {
-	border: 2px solid #d4d5d6;
+	border: 2px solid var(--light-text-color);
 	border-radius: 10px;
 	overflow-x: scroll;
 	white-space: nowrap;
@@ -477,14 +478,18 @@ footer a:hover {
 }
 
 .ChiffreMagique {
-	color: #878889;
-	font-size: xx-large;
+	color: var(--light-text-color);
+	font-size: 2.5em;
 	padding: 0.1em;
 	margin: 0.1em;
 }
 
 .HistoireNom {
+	margin-top: auto;
+	margin-bottom: auto;
+	color: var(--main-title-color);
 	font-weight: 500;
+	font-size: 0.9em;
 }
 
 .HistoireLogo {
