@@ -11,6 +11,7 @@
 	--width-mobile: 1120px;
 }
 
+/*fond de la page */
 body {
 	font-family: 'Poppins', sans-serif;
 	background: gainsboro url("../images/background.png") no-repeat center center fixed;
@@ -34,11 +35,14 @@ body {
 	overflow: hidden;
 }
 
+/* si on est sur mobile */
 @media (max-width: 1120px) {
+	/* on masque le fond*/
 	body {
 		margin: 0;
 	}
 
+	/* on retire les ombres et on met la page sur tout l'écran */
 	#page {
 		width: 100%;
 		max-width: none;
@@ -49,6 +53,7 @@ body {
 	}
 }
 
+/* barre de navigation supérieure */
 nav {
 	width: 100%;
 	background-color: white;
@@ -56,15 +61,19 @@ nav {
 	float: left;
 	margin-bottom: 5px;
 	align-items: center;
+
 	display: flex;
 	justify-content: space-between;
+	/* met des espaces égaux entre les objets du nav */
 }
 
+/* logo à gauche de la barre de navigation */
 #logo {
 	text-align: center;
 	padding-left: 25px;
 }
 
+/* image et nom du logo */
 #icon,
 #name {
 	padding: 2px;
@@ -72,33 +81,39 @@ nav {
 	vertical-align: middle;
 }
 
+/* liste de liens en haut à droite du site */
 nav ul {
 	display: flex;
 	float: right;
 	margin-right: 25px;
 }
 
+/*  bloc contenant le lien de navigation */
 nav li {
 	padding: 5px;
 	display: inline-block;
 }
 
+/* lien de navigation */
 nav a {
 	transition: .1s;
 	color: silver;
 	text-decoration: none;
 }
 
+/* survol du lien de navigation */
 nav a:hover {
 	transition: .1s;
 	color: darkgray;
 }
 
+/* lien de la page active dans la liste de liens*/
 .active {
 	transition: .1s;
 	color: dimgray;
 }
 
+/* partie contenant le titre de la page ou l'image + poste de la personne */
 header {
 	padding: 10px;
 	background: #f1f3f6;
@@ -106,6 +121,7 @@ header {
 	display: flex;
 }
 
+/* contenu du header (images+texte/titre) */
 #headerContent {
 	width: 70%;
 	margin: 0 auto;
@@ -115,17 +131,12 @@ header {
 	grid-template-columns: repeat(2, 1fr);
 }
 
-#pageHeader {
-	display: grid;
-	justify-content: center !important;
-	align-items: center !important;
-	grid-template-columns: repeat(1, 1fr);
-}
-
+/* conteneur de la photo */
 #headerPhoto {
 	padding: 25px;
 }
 
+/* photo utilisée dans le header */
 #photo {
 	width: 350px;
 	border-radius: 50%;
@@ -138,6 +149,15 @@ header {
 		inset 9px 9px 9px 3px rgba(163, 177, 198, 0.5);
 }
 
+/* conteneur du texte du header */
+#headerText {
+	width: fit-content;
+	text-align: justify;
+	margin: 0 auto;
+	display: inline-block;
+}
+
+/* titre du poste/de la page */
 h1 {
 	font-weight: 500;
 	font-size: 250%;
@@ -145,7 +165,43 @@ h1 {
 	color: var(--main-title-color);
 }
 
+/* description du poste dans le header */
+#describ {
+	color: var(--main-text-color);
+	font-size: 0.9em;
+}
+
+/* boutons sur le site (cv/envoi de formulaire) */
+input[type=submit],
+#CVButton {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1em;
+	padding: 0.5em 1.7em;
+	border-radius: 5em;
+	border: 2px solid var(--main-color);
+	transition: .1s;
+	outline: none;
+	-webkit-box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.3);
+}
+
+/* hover du bouton */
+input[type=submit]:hover,
+#CVButton:hover {
+	transition: .1s;
+	transform: scale(1.1);
+}
+
+/* clic du bouton */
+input[type=submit]:active,
+#CVButton:active {
+	transition: .1s;
+	transform: scale(0.9);
+}
+
 @media (max-width: 1120px) {
+	/* on aligne et centre le contenu si la page est sur mobile */
 	#headerContent {
 		grid-template-columns: repeat(1, 1fr);
 		text-align: center !important;
@@ -163,6 +219,7 @@ h1 {
 	}
 }
 
+/* titre des sections de page*/
 h2 {
 	font-weight: 500;
 	color: var(--main-title-color);
@@ -177,54 +234,19 @@ h2 {
 	background-image: linear-gradient(0.25turn, var(--main-color) 0%, var(--main-color) 29px, #f1f3f6 30px);
 }
 
+/* titre des compétences */
 h3 {
 	color: var(--main-title-color);
-
 	font-weight: 500;
 }
 
+/* paragraphe des compétences*/
 .skill p {
 	font-weight: 100;
 	color: var(--main-text-color);
 }
 
-#headerText {
-	width: fit-content;
-	text-align: justify;
-	margin: 0 auto;
-	display: inline-block;
-}
-
-#describ {
-	color: var(--main-text-color);
-	font-size: 0.9em;
-}
-
-input[type=submit],
-#CVButton {
-	font-family: 'Poppins', sans-serif;
-	font-size: 1em;
-	padding: 0.5em 1.7em;
-	border-radius: 5em;
-	border: 2px solid var(--main-color);
-	transition: .1s;
-	outline: none;
-	-webkit-box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.3);
-	box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.3);
-}
-
-input[type=submit]:hover,
-#CVButton:hover {
-	transition: .1s;
-	transform: scale(1.1);
-}
-input[type=submit]:active,
-#CVButton:active {
-	transition: .1s;
-	transform: scale(0.9);
-}
-
+/* parties de page */
 #skills,
 #comment,
 #clients,
@@ -235,6 +257,7 @@ input[type=submit]:active,
 	padding-bottom: 0;
 }
 
+/* conteneur des compétences et des clients */
 #skillGrid,
 .clientsGrid {
 	margin: 0 auto;
@@ -243,8 +266,8 @@ input[type=submit]:active,
 	grid-template-columns: repeat(2, 1fr);
 }
 
-/* si on passe en mode mobile*/
 @media (max-width: 1120px) {
+	/* on aligne et centre le contenu si la page est sur mobile */
 	#skillGrid {
 		grid-template-columns: repeat(1, 1fr);
 		display: flex;
@@ -257,9 +280,9 @@ input[type=submit]:active,
 	.skill {
 		text-align: center;
 	}
+
 	.textSkill {
 		display: flex;
-
 		width: 100% !important;
 	}
 }
@@ -274,12 +297,13 @@ input[type=submit]:active,
 	padding: 0.5em;
 }
 
+/* texte des compétences */
 .textSkill {
 	display: inline-block;
 	width: 78%;
 }
 
-/*contient la grille de cartes*/
+/* contient la grille de cartes */
 .slidesComments {
 	display: grid;
 	grid-gap: 10px;
@@ -287,11 +311,13 @@ input[type=submit]:active,
 	grid-template-rows: minmax(150px, 1fr);
 }
 
-/*contient toutes les div commentaires*/
+/* contient toutes les div commentaires */
 .commentGrid {
 	overflow-x: hidden;
 	white-space: nowrap;
 }
+
+/* affichage de la scrollbar au survol des avis */
 .commentGrid:hover {
 	overflow-x: scroll;
 }
@@ -356,6 +382,7 @@ input[type=submit]:active,
 
 /* si on passe en mode mobile*/
 @media (max-width: 700px) {
+	/* on affiche seulement un avis à la fois */
 	.comment {
 		display: inline-block;
 		width: 100%;
@@ -365,18 +392,20 @@ input[type=submit]:active,
 		background-position: 95% 100%;
 		background-size: 3em;
 	}
+
 	.textComment {
 		margin: 1em 2em;
 		padding: 1em 4em 1em 4em;
 	}
 }
 
+/* utilisé par le javascript pour les clients */
 .mySlides {
 	display: none;
 	/*les diapositives sont masquées par défaut pour que le JS s'occupe de les afficher*/
 }
 
-/* indicateurs du vieux système de scroll */
+/* pour le système de scroll via javascript */
 .sliders,
 .indicators {
 	display: flex;
@@ -384,6 +413,7 @@ input[type=submit]:active,
 	padding: 0.5em;
 }
 
+/* indicateurs du système de scroll js */
 .indicators button {
 	padding: 0.3em;
 	padding-left: 1em;
@@ -398,6 +428,7 @@ input[type=submit]:active,
 	background-color: #d7d8d9;
 }
 
+/* survol des indicateurs */
 .indicators button:hover {
 	background-color: var(--main-color-light);
 
@@ -409,6 +440,7 @@ input[type=submit]:active,
 	transition: .3s;
 }
 
+/*  indicateur de la slide active */
 .activeSliderIndicator {
 	padding-left: 2em !important;
 	padding-right: 2em !important;
@@ -512,6 +544,7 @@ footer a:hover {
 	.story {
 		width: 100%;
 	}
+
 	#storyGrid {
 		flex-direction: column;
 	}
@@ -584,6 +617,7 @@ input[type=submit] {
 	display: block !important;
 	width: 50% !important;
 }
+
 .contactContent {
 	padding-top: 2em;
 	padding-bottom: 2em;
